@@ -11,7 +11,7 @@
 | birthday           | date   | null: false               |
 
 - has_many :purchases
-- has_many :item
+- has_many :items
 
 ## itemsテーブル
 | Column              | Type        | Options     
@@ -24,7 +24,7 @@
 | user                | references  | foreign_key: true |
 
 - has_one :purchase
-- has_one :user
+- belongs_to :user
 
 ## addressesテーブル
 | Column          | Type       | Options          |
