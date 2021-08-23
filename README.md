@@ -1,43 +1,25 @@
-## usersテーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| email              | string | null: false |
-| encrypted_password | string | null: false |
-| nickname           | string | null: false |
-| first_name         | string | null: false |
-| family_name        | string | null: false |
-| first_name_kana    | string | null: false |
-| family_name_kana   | string | null: false |
+# README
 
-## commentsテーブル
-| Column       | Type       | Options     |
-| ------------ | ---------- | ----------- |
-| comment_text | text       | null: false |
-| user.id      | references |             |
-| item_id      | references |             |
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## itemsテーブル
-| Column           | Type        | Options     |
-| ---------------- | ----------- | ----------- |
-| image            | string      | null: false |
-| item_name        | string      | null: false |
-| item_text        | text        | null: false |
-| price            | string      | null: false |
-| category         | string      | null: false |
-| condition        | string      | null: false |
-| shipping_address | string      | null: false |
-| delivery_days    | string      | null: false |
-| user_id          | references  |             |
-| comment_id       | references  |             |
+Things you may want to cover:
 
-## addressesテーブル
-| Column          | Type       | Options     |
-| --------------- | -----------| ----------- |
-| postal_code     | string     | null: false |
-| city            | string     | null: false |
-| street          | string     | null: false |
-| address         | string     | null: false |
-| building        | string     | null: false |
-| phone           | string     | null: false |
-| user_id         | references |             |
-| item_id         | references |             |
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
