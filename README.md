@@ -11,7 +11,7 @@
 | birthday           | date   | null: false               |
 
 - has_many :purchases
-- has_one :item
+- has_many :item
 
 ## itemsテーブル
 | Column              | Type        | Options     
@@ -21,25 +21,23 @@
 | price               | integer     | null: false |
 | delivery_fee_id     | integer     | null: false |
 | area_id             | integer     | null: false |
-| delivery_day_id     | integer     | null: false |
-| category_id         | integer     | null: false |
-| condition_id        | integer     | null: false |
-| order               | references  | foreign_key: true |
 | user                | references  | foreign_key: true |
 
 - has_one :purchase
+- has_one :user
 
 ## addressesテーブル
-| Column          | Type       | Options     |
+| Column          | Type       | Options          |
 | --------------- | -----------| ----------- |
 | postal_code     | integer    | null: false |
 | prefecture_id   | integer    | null: false |
 | city            | string     | null: false |
 | address         | string     | null: false |
-| building        | string     |             |
-| phone           | string     | null: false |
+| building        | string     |                 |
+| phone           | string     | null: false       |
+| purchases       | references | foreign_key: true |
 
-- has_many :items
+- belongs_to :purchase
 
 ## purchasesテーブル
 | Column | Type       | Options           |
@@ -47,4 +45,6 @@
 | user   | references | foreign_key: true |
 | item   | references | foreign_key: true |
 
-- belongs_to :items
+- belongs_to :item
+- belongs_to :user
+- belongs_to :address
