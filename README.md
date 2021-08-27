@@ -4,10 +4,10 @@
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
 | nickname           | string | null: false               |
-| first_name         | date   | null: false               |
-| family_name        | date   | null: false               |
-| first_name_kana    | date   | null: false               |
-| family_name_kana   | date   | null: false               |
+| first_name         | string | null: false               |
+| family_name        | string | null: false               |
+| first_name_kana    | string | null: false               |
+| family_name_kana   | string | null: false               |
 | birthday           | date   | null: false               |
 
 - has_many :purchases
