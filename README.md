@@ -14,26 +14,26 @@
 - has_many :items
 
 ## itemsテーブル
-| Column              | Type        | Options     
-| ------------------- | ----------- | ----------- |
-| name                | string      | null: false |
-| text                | text        | null: false |
-| price               | integer     | null: false |
-| delivery_fee_id     | integer     | null: false |
-| area_id             | integer     | null: false |
+| Column              | Type        | Options           |
+| ------------------- | ----------- | ----------------- |
+| title               | string      | null: false       |
+| text                | text        | null: false       |
+| price               | integer     | null: false       |
+| delivery_fee_id     | integer     | null: false       |
+| prefecture_id       | integer     | null: false       |
 | user                | references  | foreign_key: true |
 
 - has_one :purchase
 - belongs_to :user
 
 ## addressesテーブル
-| Column          | Type       | Options          |
-| --------------- | -----------| ----------- |
-| postal_code     | integer    | null: false |
-| prefecture_id   | integer    | null: false |
-| city            | string     | null: false |
-| address         | string     | null: false |
-| building        | string     |                 |
+| Column          | Type       | Options           |
+| --------------- | -----------| ----------------- |
+| postal_code     | integer    | null: false       |
+| prefecture_id   | integer    | null: false       |
+| city            | string     | null: false       |
+| address         | string     | null: false       |
+| building        | string     |                   |
 | phone           | string     | null: false       |
 | purchases       | references | foreign_key: true |
 
