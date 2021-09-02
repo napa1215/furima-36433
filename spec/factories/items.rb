@@ -3,11 +3,11 @@ FactoryBot.define do
     title         {"名前"}
     text          {"説明"}
     price           {2000}
-    genre_id           {3}
-    condition_id       {3}
-    delivery_fee_id    {3}
-    prefecture_id      {3}
-    delivery_time_id   {3}  
+    genre_id           {0}
+    condition_id       {0}
+    delivery_fee_id    {0}
+    prefecture_id      {0}
+    delivery_time_id   {0}  
     association :user
     
     after(:build) do |item|
