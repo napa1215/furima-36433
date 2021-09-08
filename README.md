@@ -10,7 +10,7 @@
 | family_name_kana   | string | null: false               |
 | birthday           | date   | null: false               |
 
-- has_many :purchases
+- has_many :order
 - has_many :items
 
 ## itemsテーブル
@@ -26,7 +26,7 @@
 | price               | integer     | null: false       |
 | user                | references  | foreign_key: true |
 
-- has_one :purchase
+- has_one :order
 - belongs_to :user
 
 ## addressesテーブル
@@ -38,11 +38,11 @@
 | address         | string     | null: false       |
 | building        | string     |                   |
 | phone           | string     | null: false       |
-| purchases       | references | foreign_key: true |
+| order           | references | foreign_key: true |
 
-- belongs_to :purchase
+- belongs_to :order
 
-## purchasesテーブル
+## ordersテーブル
 | Column | Type       | Options           |
 | ------ | -----------| ----------------- |
 | user   | references | foreign_key: true |
