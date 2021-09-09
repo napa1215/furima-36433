@@ -10,7 +10,7 @@
 | family_name_kana   | string | null: false               |
 | birthday           | date   | null: false               |
 
-- has_many :order
+- has_many :orders
 - has_many :items
 
 ## itemsテーブル
@@ -32,7 +32,7 @@
 ## addressesテーブル
 | Column          | Type       | Options           |
 | --------------- | -----------| ----------------- |
-| postal_code     | integer    | null: false       |
+| postal_code     | string     | null: false       |
 | prefecture_id   | integer    | null: false       |
 | city            | string     | null: false       |
 | address         | string     | null: false       |
