@@ -5,7 +5,7 @@ FactoryBot.define do
     city          { '多摩市' }
     address       { '1-1' }
     building      { '東京ハイツ' }
-    phone         { '09012345678' }
-    
+    phone         { '09012345678' }  
+    token {"tok_abcdefghijk00000000000000000"}
   end
 end

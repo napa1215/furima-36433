@@ -8,6 +8,8 @@ class OrderAddress
     validates :address
     validates :phone, format: {with: /\A\d{10}\z|\A\d{11}\z/ , message: "is invalid."}  
     validates :user_id
+    validates :item_id
+    validates :token
   end 
     validates :prefecture_id, numericality: { other_than: 0 , message: "can't be blank"}
 
