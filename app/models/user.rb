@@ -16,7 +16,7 @@ class User < ApplicationRecord
   end
 
     # 半角英字数字のみ許可する
-    validates :password, format: {with: /\A(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{7,}\z/ , message: "is invalid. Input half-width characters."} do
+    validates :password, format: {with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: "is invalid. Input half-width characters."} do
     end
 
   with_options presence: true do
